@@ -1,0 +1,19 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3456:3000"
+    environment:
+      - OLLAMA_ENDPOINT=${OLLAMA_ENDPOINT:-http://10.10.10.216:11434}
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3.2:3b}
+    restart: always
+
+  socket-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.socket
+    ports:
+      - "3001:3001"
+    restart: always
