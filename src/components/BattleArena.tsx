@@ -557,14 +557,14 @@ export default function BattleArena() {
       {/* ══════ DESKTOP NAVBAR — fixed, full-width ══════ */}
       <header className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-b-2 border-slate-200 dark:border-slate-800">
         <div className="w-full max-w-[1400px] mx-auto px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-[#5865F2] rounded-xl flex items-center justify-center shadow-[0_4px_0_#3c45a5] hover:-rotate-6 transition-transform">
+          <a href="/" className="flex items-center gap-3 group" onClick={resetBattle}>
+            <div className="w-9 h-9 bg-[#5865F2] rounded-xl flex items-center justify-center shadow-[0_4px_0_#3c45a5] group-hover:-rotate-6 transition-transform">
               <Flame className="w-5 h-5 text-white fill-white" />
             </div>
             <span className="text-lg font-black tracking-tight text-slate-800 dark:text-white">
               YoMama<span className="text-[#5865F2]">Battle</span>
             </span>
-          </div>
+          </a>
           <div className="flex items-center gap-3">
             <div className="flex gap-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl border border-slate-200 dark:border-slate-700">
               {(['local', 'multiplayer'] as const).map((m) => (
@@ -587,14 +587,14 @@ export default function BattleArena() {
       {/* ══════ MOBILE TOP BAR — fixed ══════ */}
       <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b-2 border-slate-200 dark:border-slate-800">
         <div className="flex items-center justify-between px-4 h-14">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-[#5865F2] rounded-lg flex items-center justify-center">
+          <a href="/" className="flex items-center gap-2 group" onClick={resetBattle}>
+            <div className="w-7 h-7 bg-[#5865F2] rounded-lg flex items-center justify-center group-hover:-rotate-6 transition-transform">
               <Flame className="w-4 h-4 text-white fill-white" />
             </div>
             <span className="text-base font-black tracking-tight text-slate-800 dark:text-white">
               YoMama<span className="text-[#5865F2]">Battle</span>
             </span>
-          </div>
+          </a>
           <div className="flex items-center gap-1">
             <div className="flex gap-0.5 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl border border-slate-200 dark:border-slate-700 mr-1">
               {(['local', 'multiplayer'] as const).map((m) => (
