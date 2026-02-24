@@ -9,8 +9,8 @@ import type { BattleState, Player } from './gameService';
 
 const SOCKET_SERVER_URL =
   typeof window !== 'undefined'
-    ? process.env.NEXT_PUBLIC_SOCKET_URL ?? 'http://localhost:3001'
-    : 'http://localhost:3001';
+    ? process.env.NEXT_PUBLIC_SOCKET_URL ?? 'http://localhost:3567'
+    : 'http://localhost:3567';
 
 export interface MatchFoundPayload {
   id: string;

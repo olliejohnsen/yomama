@@ -8,6 +8,7 @@ services:
     environment:
       - OLLAMA_ENDPOINT=${OLLAMA_ENDPOINT:-http://10.10.10.216:11434}
       - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3.2:3b}
+      - NEXT_PUBLIC_SOCKET_URL=http://localhost:3567
     restart: always
 
   socket-server:
@@ -15,5 +16,5 @@ services:
       context: .
       dockerfile: Dockerfile.socket
     ports:
-      - "3001:3001"
+      - "3567:3001"
     restart: always
